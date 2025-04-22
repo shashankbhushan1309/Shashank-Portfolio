@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 24.6 95% 53.1%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 24.6 95% 53.1%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 20.5 90.2% 48.2%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 20.5 90.2% 48.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.3s forwards;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.6s forwards;
+}
+
+.animate-fade-in-delay-3 {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.9s forwards;
+}
+
+@keyframes pulseSlow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3s ease-in-out infinite;
+}
+
+.bg-grid-white {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
+/* Neon glow effects */
+.glow-purple {
+  box-shadow: 0 0 5px theme("colors.purple.500"), 0 0 10px theme("colors.purple.500");
+}
+
+.glow-cyan {
+  box-shadow: 0 0 5px theme("colors.cyan.500"), 0 0 10px theme("colors.cyan.500");
+}
+
+.glow-pink {
+  box-shadow: 0 0 5px theme("colors.pink.500"), 0 0 10px theme("colors.pink.500");
+}
+
+.glow-green {
+  box-shadow: 0 0 5px theme("colors.green.500"), 0 0 10px theme("colors.green.500");
+}
+
+.glow-blue {
+  box-shadow: 0 0 5px theme("colors.blue.500"), 0 0 10px theme("colors.blue.500");
+}
+
+.glow-yellow {
+  box-shadow: 0 0 5px theme("colors.yellow.500"), 0 0 10px theme("colors.yellow.500");
+}
+
+.glow-orange {
+  box-shadow: 0 0 5px theme("colors.orange.500"), 0 0 10px theme("colors.orange.500");
+}
+
+.glow-indigo {
+  box-shadow: 0 0 5px theme("colors.indigo.500"), 0 0 10px theme("colors.indigo.500");
+}
+
+/* Border glow effects */
+.glow-border-purple {
+  box-shadow: 0 0 5px theme("colors.purple.500"), 0 0 10px theme("colors.purple.500");
+}
+
+.glow-border-cyan {
+  box-shadow: 0 0 5px theme("colors.cyan.500"), 0 0 10px theme("colors.cyan.500");
+}
+
+.glow-border-pink {
+  box-shadow: 0 0 5px theme("colors.pink.500"), 0 0 10px theme("colors.pink.500");
+}
+
+.glow-border-green {
+  box-shadow: 0 0 5px theme("colors.green.500"), 0 0 10px theme("colors.green.500");
+}
+
+.glow-border-blue {
+  box-shadow: 0 0 5px theme("colors.blue.500"), 0 0 10px theme("colors.blue.500");
+}
+
+.glow-border-yellow {
+  box-shadow: 0 0 5px theme("colors.yellow.500"), 0 0 10px theme("colors.yellow.500");
+}
+
+.glow-border-orange {
+  box-shadow: 0 0 5px theme("colors.orange.500"), 0 0 10px theme("colors.orange.500");
+}
+
+.glow-border-indigo {
+  box-shadow: 0 0 5px theme("colors.indigo.500"), 0 0 10px theme("colors.indigo.500");
+}
+
+/* Text glow effects */
+.glow-text-purple {
+  text-shadow: 0 0 5px theme("colors.purple.500"), 0 0 10px theme("colors.purple.500");
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 5px theme("colors.cyan.500"), 0 0 10px theme("colors.cyan.500");
+}
+
+.glow-text-pink {
+  text-shadow: 0 0 5px theme("colors.pink.500"), 0 0 10px theme("colors.pink.500");
+}
+
+.glow-text-green {
+  text-shadow: 0 0 5px theme("colors.green.500"), 0 0 10px theme("colors.green.500");
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 5px theme("colors.blue.500"), 0 0 10px theme("colors.blue.500");
+}
+
+.glow-text-yellow {
+  text-shadow: 0 0 5px theme("colors.yellow.500"), 0 0 10px theme("colors.yellow.500");
+}
+
+.glow-text-orange {
+  text-shadow: 0 0 5px theme("colors.orange.500"), 0 0 10px theme("colors.orange.500");
+}
+
+.text-glow-purple:hover {
+  text-shadow: 0 0 5px theme("colors.purple.500"), 0 0 10px theme("colors.purple.500");
+}
+
+.text-glow-cyan:hover {
+  text-shadow: 0 0 5px theme("colors.cyan.500"), 0 0 10px theme("colors.cyan.500");
+}
+
+.text-glow-pink:hover {
+  text-shadow: 0 0 5px theme("colors.pink.500"), 0 0 10px theme("colors.pink.500");
+}
+
+.text-glow-green:hover {
+  text-shadow: 0 0 5px theme("colors.green.500"), 0 0 10px theme("colors.green.500");
+}
+
+.text-glow-blue:hover {
+  text-shadow: 0 0 5px theme("colors.blue.500"), 0 0 10px theme("colors.blue.500");
+}
+
+.text-glow-yellow:hover {
+  text-shadow: 0 0 5px theme("colors.yellow.500"), 0 0 10px theme("colors.yellow.500");
+}
+
+.text-glow-orange:hover {
+  text-shadow: 0 0 5px theme("colors.orange.500"), 0 0 10px theme("colors.orange.500");
+}
